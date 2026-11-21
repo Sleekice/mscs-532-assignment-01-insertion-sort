@@ -40,9 +40,9 @@ A sequence is monotonically decreasing when each element is greater than or equa
 
 Mathematically:
 
-[
+$$
 a_1 \geq a_2 \geq a_3 \geq \cdots \geq a_n
-]
+$$
 
 For example:
 
@@ -164,15 +164,15 @@ Because the array is already correctly ordered, the inner loop does not shift an
 
 The number of key comparisons is:
 
-[
+$$
 T(n)=n-1
-]
+$$
 
 Therefore, the running time grows linearly with the number of elements:
 
-[
+$$
 T(n)=\Theta(n)
-]
+$$
 
 ### Worst Case — O(n²)
 
@@ -188,27 +188,27 @@ Since the algorithm must sort in decreasing order, each new key must be inserted
 
 The number of key comparisons across successive iterations is:
 
-[
+$$
 T(n)=1+2+3+\cdots+(n-1)
-]
+$$
 
 Using the arithmetic series formula:
 
-[
+$$
 T(n)=\frac{n(n-1)}{2}
-]
+$$
 
 Expanding:
 
-[
+$$
 T(n)=\frac{n^2-n}{2}
-]
+$$
 
-The dominant term is (n^2). Ignoring constant factors and lower-order terms gives:
+The dominant term is $n^2$. Ignoring constant factors and lower-order terms gives:
 
-[
+$$
 T(n)=\Theta(n^2)
-]
+$$
 
 ### Average Case — O(n²)
 
@@ -216,21 +216,21 @@ For a uniformly random ordering of distinct elements, each key is expected to mo
 
 The expected number of shifts is:
 
-[
-E[S(n)]=\frac12\sum\_{i=1}^{n-1}i
-]
+$$
+E[S(n)]=\frac{1}{2}\sum_{i=1}^{n-1}i
+$$
 
 Therefore:
 
-[
-E[S(n)]=\frac{n(n-1)}4
-]
+$$
+E[S(n)]=\frac{n(n-1)}{4}
+$$
 
 Since the dominant term is quadratic, the expected running time is:
 
-[
+$$
 E[T(n)]=\Theta(n^2)
-]
+$$
 
 ### Complexity Summary
 
@@ -255,9 +255,9 @@ The number of extra variables does not increase with the input size.
 
 Therefore, the auxiliary space complexity is:
 
-[
+$$
 S(n)=O(1)
-]
+$$
 
 This makes insertion sort an **in-place sorting algorithm**.
 
